@@ -7,6 +7,7 @@ function fish_user_key_bindings
 end
 #alias
 alias nv="nvim"
+alias config_astrovim="nvim +PackerSync"
 alias tmux="tmux -2"
 alias bugbox="docker start -ai bug"
 alias ubuntu="docker start -ai ubuntu"
