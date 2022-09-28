@@ -12,7 +12,7 @@ lvim.leader = "space"
 
 -- Overriding LunarVim's default keybindings
 keybinding_prefix["<C-f>"] = ":Telescope find_files<CR>"
-keybinding_prefix["<C-b>"] = ":NvimTreeToggle<CR>"
+keybinding_prefix["<C-s>"] = ":NvimTreeToggle<CR>"
 keybinding_prefix["<leader>r"] = ":NvimTreeRefresh<CR>"
 keybinding_prefix["<C-n>"] = ":bnext<CR>"
 keybinding_prefix["<C-p>"] = ":bprevious<CR>"
