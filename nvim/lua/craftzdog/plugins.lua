@@ -48,5 +48,10 @@ packer.startup(function(use)
   use 'dinhhuy258/git.nvim' -- For git blame & browse
   use 'p00f/nvim-ts-rainbow' --rainbow
  -- use 'terrortylor/nvim-comment' --commenting tool
-  use 'numToStr/Comment.nvim'
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+}
 end)
