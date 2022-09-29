@@ -52,6 +52,16 @@ packer.startup(function(use)
     'numToStr/Comment.nvim',
     config = function()
         require('Comment').setup()
-    end
+    end}
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+  require("toggleterm").setup()
+    end,
+  }
+  use {
+  'kyazdani42/nvim-tree.lua',
+  requires = {
+    'kyazdani42/nvim-web-devicons', -- optional, for file icons
+  },
+  tag = 'nightly' -- optional, updated every week. (see issue #1193)
 }
 end)
