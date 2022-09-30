@@ -37,6 +37,7 @@ keymap("n", "<S-q>", ":bd<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<C-s>", ":w<CR>", opts)
 
+keymap("n", "<Space>sf", ":lua vim.lsp.buf.format({ timeout_ms = 2000 })<CR>", opts)
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
@@ -65,10 +66,10 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Terminal --
 -- Better terminal navigation
--- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
--- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
--- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
--- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
+keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
+keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
+keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 
 -- local keymap = vim.keymap
@@ -76,8 +77,8 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap.set('n', 'x', '"_x')
 --
 -- -- Increment/decrement
--- keymap.set('n', '+', '<C-a>')
--- keymap.set('n', '-', '<C-x>')
+keymap('n', '+', '<C-a>', opts)
+keymap('n', '-', '<C-x>', opts)
 --
 -- -- Delete a word backwards
 -- keymap.set('n', 'dw', 'vb"_d')
@@ -108,3 +109,28 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- -- # Quick exit from insert mode
 -- keymap.set("i", "jk", "<ESC>", opts)
 -- keymap.set("i", "jj", "<ESC>", opts)
+--
+-- -- Better terminal navigation
+-- keymap.set("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
+-- keymap.set("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
+-- keymap.set("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
+-- keymap.set("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+--
+--
+-- -- -- Better window navigation
+-- -- keymap("n", "<C-h>", "<C-w>h", opts)
+-- -- keymap("n", "<C-j>", "<C-w>j", opts)
+-- -- keymap("n", "<C-k>", "<C-w>k", opts)
+-- -- keymap("n", "<C-l>", "<C-w>l", opts)
+--
+-- -- -- Navigate buffers
+-- -- keymap("n", "<S-l>", ":bnext<CR>", opts)
+-- keymap.set("n", "<S-q>", ":bd<CR>", opts)
+-- -- keymap("n", "<S-h>", ":bprevious<CR>", opts)
+-- keymap.set("n", "<C-s>", ":w<CR>", opts)
+-- --
+-- keymap.set("n", "<Space>sf", ":lua vim.lsp.buf.format({ timeout_ms = 2000 })<CR>", opts)
+-- -- -- Move text up and down
+-- keymap.set("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
+-- keymap.set("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+--

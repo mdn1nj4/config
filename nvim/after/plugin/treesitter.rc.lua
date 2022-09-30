@@ -8,7 +8,7 @@ ts.setup {
   },
   indent = {
     enable = true,
-    disable = {},
+    disable = {"python"},
   },
   ensure_installed = {
     "tsx",
@@ -20,7 +20,8 @@ ts.setup {
     "swift",
     "css",
     "html",
-    "lua"
+    "lua",
+    "python",
   },
   autotag = {
     enable = true,
