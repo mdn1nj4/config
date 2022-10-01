@@ -15,6 +15,20 @@ alias la "ls -A"
 alias ll "ls -l"
 alias lla "ll -A"
 alias g git
+
+#alias
+alias nv="nvim"
+alias config_astrovim="nvim +PackerSync"
+alias docker_bugbox="docker start bug && docker exec -it bug fish"
+alias bugbox="docker exec -ti bug fish"
+alias docker_ubuntu="docker start ubuntu && docker exec -it ubuntu fish"
+alias ubuntu="docker exec -it ubuntu"
+alias ctfbox="docker exec -it ctf"
+alias docker_ctf="docker start ctf && docker exec -it ctf fish"
+alias http-server='python3 -m http.server 8080'
+alias php-server='php -S 127.0.0.1:80 -t .'
+alias ftp-server='python -m pyftpdlib -u "admin" -P "S3cur3d_Ftp_3rv3r" -p 2121'
+
 command -qv nvim && alias vim nvim
 
 set -gx EDITOR nvim
