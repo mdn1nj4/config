@@ -32,10 +32,12 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
+-- keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-q>", ":bd<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("i", "<S-q>", "<Esc>:bd<CR>", opts)
+-- keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<C-s>", ":w<CR>", opts)
+keymap("i", "<C-s>", "Esc>:w<CR>", opts)
 
 keymap("n", "<Space>sf", ":lua vim.lsp.buf.format({ timeout_ms = 2000 })<CR>", opts)
 -- Move text up and down
