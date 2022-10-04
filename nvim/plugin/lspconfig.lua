@@ -94,6 +94,12 @@ nvim_lsp.sumneko_lua.setup {
 }
 nvim_lsp.pyright.setup{}
 nvim_lsp.tailwindcss.setup {}
+nvim_lsp.html.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+nvim_lsp.clangd.setup{}
+nvim_lsp.gopls.setup{}
 -- nvim_lsp.eslint.setup{}
 -- nvim_lsp.eslint.setup{}
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
